@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美容院 HANA | 京都・烏丸のヘアサロン</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;color:#3a3028;background:#faf8f5}
+a{text-decoration:none;color:inherit}
+header{background:#fff;padding:16px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e8e0d8;position:sticky;top:0;z-index:100}
+.logo{font-size:22px;letter-spacing:.3em;color:#3a3028;font-weight:300}
+.logo span{color:#c9a07a}
+nav a{font-size:12px;color:#888;margin-left:24px;letter-spacing:.1em}
+nav a:hover{color:#c9a07a}
+.hero{background:linear-gradient(rgba(255,255,255,.3),rgba(255,255,255,.3)),url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1400') center/cover;padding:100px 24px;text-align:center}
+.hero h1{font-size:48px;font-weight:200;letter-spacing:.5em;color:#3a3028;margin-bottom:12px}
+.hero p{font-size:14px;letter-spacing:.2em;color:#8a7060;margin-bottom:36px}
+.hero .btn{background:#3a3028;color:#fff;padding:14px 44px;font-size:12px;letter-spacing:.2em;border-radius:30px}
+.concept{max-width:760px;margin:0 auto;padding:80px 24px;text-align:center}
+.concept h2{font-size:13px;letter-spacing:.3em;color:#c9a07a;margin-bottom:16px}
+.concept h3{font-size:28px;font-weight:300;letter-spacing:.2em;margin-bottom:32px}
+.concept p{line-height:2.4;font-size:14px;color:#6a5a50}
+.menu{background:#f5f0ea;padding:80px 24px}
+.menu h2{font-size:13px;letter-spacing:.3em;color:#c9a07a;text-align:center;margin-bottom:12px}
+.menu h3{font-size:26px;font-weight:300;letter-spacing:.2em;text-align:center;margin-bottom:48px}
+.menu-tabs{display:flex;justify-content:center;gap:0;margin-bottom:40px}
+.tab{padding:10px 32px;border:1px solid #d0c8be;font-size:12px;letter-spacing:.15em;cursor:pointer;background:#fff}
+.tab.active{background:#3a3028;color:#fff;border-color:#3a3028}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;max-width:900px;margin:0 auto}
+.menu-card{background:#fff;padding:28px;border-radius:4px}
+.menu-card h4{font-size:14px;letter-spacing:.1em;margin-bottom:4px;color:#3a3028}
+.menu-card .price{font-size:22px;color:#c9a07a;margin-bottom:8px;font-weight:300}
+.menu-card p{font-size:12px;color:#8a7060;line-height:1.8}
+.staff{padding:80px 24px;max-width:900px;margin:0 auto;text-align:center}
+.staff h2{font-size:13px;letter-spacing:.3em;color:#c9a07a;margin-bottom:12px}
+.staff h3{font-size:26px;font-weight:300;letter-spacing:.2em;margin-bottom:48px}
+.staff-card{display:flex;gap:40px;align-items:center;text-align:left;background:#faf8f5;padding:40px;border-radius:4px}
+.staff-img{width:160px;height:160px;border-radius:50%;background:#e0d8d0;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#b0a090;font-size:12px}
+.staff-card h4{font-size:18px;font-weight:300;letter-spacing:.2em;margin-bottom:4px}
+.staff-card .role{font-size:12px;color:#c9a07a;letter-spacing:.1em;margin-bottom:16px}
+.staff-card p{font-size:13px;color:#6a5a50;line-height:2}
+@media(max-width:600px){.staff-card{flex-direction:column;text-align:center}}
+.access{background:#3a3028;color:#f0ebe4;padding:80px 24px}
+.access h2{font-size:13px;letter-spacing:.3em;color:#c9a07a;text-align:center;margin-bottom:12px}
+.access h3{font-size:26px;font-weight:300;letter-spacing:.2em;text-align:center;margin-bottom:48px}
+.access-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:900px;margin:0 auto}
+.access-info p{line-height:2.8;font-size:13px;color:#c8bdb0}
+.access-info .label{color:#c9a07a;margin-right:12px;font-size:12px;letter-spacing:.1em}
+.map{background:#2a2018;height:280px;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#6a5a50;font-size:13px}
+@media(max-width:640px){.access-grid{grid-template-columns:1fr}}
+.contact{padding:80px 24px;text-align:center;background:#faf8f5}
+.contact h2{font-size:13px;letter-spacing:.3em;color:#c9a07a;margin-bottom:12px}
+.contact h3{font-size:26px;font-weight:300;letter-spacing:.2em;margin-bottom:16px}
+.contact p{font-size:13px;color:#8a7060;margin-bottom:40px;line-height:2}
+form{max-width:480px;margin:0 auto;text-align:left}
+form label{font-size:11px;letter-spacing:.15em;color:#8a7060;display:block;margin-bottom:6px}
+form input,form select,form textarea{width:100%;border:1px solid #d8d0c8;background:#fff;padding:12px 16px;font-size:13px;font-family:inherit;margin-bottom:20px;border-radius:2px}
+form textarea{height:100px;resize:vertical}
+form button{width:100%;background:#3a3028;color:#fff;border:none;padding:16px;font-size:12px;letter-spacing:.2em;cursor:pointer;font-family:inherit;border-radius:2px}
+footer{background:#2a2018;color:#6a5a50;padding:32px;text-align:center;font-size:12px;line-height:2.4;letter-spacing:.06em}
+footer .name{color:#c9a07a;font-size:16px;letter-spacing:.3em;margin-bottom:8px;font-weight:300}
+.sample-badge{position:fixed;bottom:16px;right:16px;background:#e74c3c;color:#fff;font-size:11px;padding:6px 12px;border-radius:20px;font-family:sans-serif;font-weight:700;z-index:999}
+</style>
+</head>
+<body>
+<div class="sample-badge">※ サンプルサイト</div>
+<header>
+  <div class="logo">HANA<span>.</span></div>
+  <nav>
+    <a href="#concept">コンセプト</a>
+    <a href="#menu">メニュー</a>
+    <a href="#staff">スタッフ</a>
+    <a href="#access">アクセス</a>
+    <a href="#contact">予約</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>HANA</h1>
+  <p>あなたらしい美しさを、丁寧に引き出す</p>
+  <a href="#contact" class="btn">ご予約・お問い合わせ</a>
+</section>
+
+<section class="concept" id="concept">
+  <h2>CONCEPT</h2>
+  <h3>自分らしさに、出会う場所</h3>
+  <p>
+    忙しい日常の中でも、ゆったりとした時間を感じてほしい。<br>
+    お客様一人ひとりの骨格・髪質・ライフスタイルをていねいにヒアリングし、<br>
+    その方だけに似合うスタイルをご提案します。<br><br>
+    白とベージュを基調とした落ち着いた空間で、<br>
+    非日常のひとときをお楽しみください。
+  </p>
+</section>
+
+<section class="menu" id="menu">
+  <h2>MENU</h2>
+  <h3>料金メニュー</h3>
+  <div class="menu-grid">
+    <div class="menu-card">
+      <h4>カット</h4>
+      <div class="price">¥5,500〜</div>
+      <p>丁寧なカウンセリングで、ご希望のスタイルに仕上げます。</p>
+    </div>
+    <div class="menu-card">
+      <h4>カット＋カラー</h4>
+      <div class="price">¥13,200〜</div>
+      <p>トレンドカラーからナチュラルな白髪染めまで対応しています。</p>
+    </div>
+    <div class="menu-card">
+      <h4>カット＋パーマ</h4>
+      <div class="price">¥15,400〜</div>
+      <p>デジタルパーマ・コールドパーマどちらも対応可能です。</p>
+    </div>
+    <div class="menu-card">
+      <h4>トリートメント</h4>
+      <div class="price">¥3,300〜</div>
+      <p>髪の内部から補修し、しっとりとしたツヤのある髪に整えます。</p>
+    </div>
+    <div class="menu-card">
+      <h4>ヘッドスパ</h4>
+      <div class="price">¥4,400〜</div>
+      <p>頭皮の血行を促進し、リラックス効果も高いメニューです。</p>
+    </div>
+    <div class="menu-card">
+      <h4>学生割引</h4>
+      <div class="price">10%OFF</div>
+      <p>学生証をご提示いただいたお客様は全メニュー10%オフになります。</p>
+    </div>
+  </div>
+</section>
+
+<section class="staff" id="staff">
+  <h2>STAFF</h2>
+  <h3>スタイリスト紹介</h3>
+  <div class="staff-card">
+    <div class="staff-img">Photo</div>
+    <div>
+      <h4>田中 花子</h4>
+      <div class="role">オーナースタイリスト</div>
+      <p>
+        美容師歴15年。大阪・東京のサロンで経験を積んだのち、地元京都に戻り「HANA」を開業。<br>
+        骨格診断・パーソナルカラー診断を取り入れたスタイル提案が得意です。<br>
+        「切って良かった」と感じていただける一枚を目指しています。
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="access" id="access">
+  <h2>ACCESS</h2>
+  <h3>アクセス</h3>
+  <div class="access-grid">
+    <div class="access-info">
+      <p><span class="label">住所</span>京都市中京区〇〇町2-3-4</p>
+      <p><span class="label">電話</span>075-XXX-XXXX</p>
+      <p><span class="label">営業時間</span>10:00 〜 19:00（最終受付18:00）</p>
+      <p><span class="label">定休日</span>火曜日・第3月曜日</p>
+      <p><span class="label">アクセス</span>地下鉄「烏丸御池」駅 徒歩4分</p>
+      <p><span class="label">駐車場</span>近隣コインパーキングをご利用ください</p>
+    </div>
+    <div class="map">Googleマップ（埋め込み）</div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>RESERVATION</h2>
+  <h3>ご予約・お問い合わせ</h3>
+  <p>初めてのお客様も、お気軽にどうぞ。<br>ご不明な点はお電話またはフォームよりお問い合わせください。</p>
+  <form>
+    <label>お名前</label>
+    <input type="text" placeholder="山田 花子">
+    <label>電話番号</label>
+    <input type="tel" placeholder="090-XXXX-XXXX">
+    <label>ご希望日</label>
+    <input type="date">
+    <label>メニュー</label>
+    <select>
+      <option>メニューを選択</option>
+      <option>カット</option>
+      <option>カット＋カラー</option>
+      <option>カット＋パーマ</option>
+      <option>トリートメント</option>
+      <option>ヘッドスパ</option>
+    </select>
+    <label>ご要望・ご質問</label>
+    <textarea placeholder="ご希望のスタイルや気になること等をお書きください"></textarea>
+    <button type="submit">予約リクエストを送る</button>
+  </form>
+</section>
+
+<footer>
+  <div class="name">HANA.</div>
+  京都市中京区〇〇町2-3-4　／　TEL：075-XXX-XXXX<br>
+  営業時間：10:00〜19:00　定休日：火曜日・第3月曜日<br>
+  <small style="color:#3a2a1a;margin-top:8px;display:block">※ これはサンプルサイトです。ten.（ホームページ制作）が制作しました。</small>
+</footer>
+</body>
+</html>

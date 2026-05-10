@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Café Soleil | 京都・北山のカフェ</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;color:#3a2a18;background:#fdf8f0}
+a{text-decoration:none;color:inherit}
+header{background:rgba(253,248,240,.95);padding:16px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e8d8b8;position:sticky;top:0;z-index:100;backdrop-filter:blur(4px)}
+.logo{font-size:22px;letter-spacing:.3em;color:#8a5a28;font-weight:300;font-style:italic}
+nav a{font-size:12px;color:#8a7050;margin-left:24px;letter-spacing:.1em}
+nav a:hover{color:#c8842a}
+.hero{background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1400') center/cover;color:#fff;padding:120px 24px;text-align:center}
+.hero h1{font-size:52px;font-weight:200;letter-spacing:.4em;margin-bottom:8px;font-style:italic}
+.hero p{font-size:14px;letter-spacing:.2em;color:#f0dfa8;margin-bottom:36px}
+.hero .btn{border:1px solid #fff;color:#fff;padding:12px 40px;font-size:12px;letter-spacing:.2em;border-radius:2px}
+.hero .btn:hover{background:#fff;color:#3a2a18}
+.concept{max-width:700px;margin:0 auto;padding:80px 24px;text-align:center}
+.concept h2{font-size:28px;font-weight:200;letter-spacing:.3em;color:#8a5a28;margin-bottom:20px;font-style:italic}
+.divider{display:flex;align-items:center;gap:16px;margin:0 auto 32px;width:200px}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:#d4a870}
+.divider::before{content:'☕'}
+.concept p{line-height:2.4;font-size:14px;color:#6a5040}
+.menu{padding:80px 24px;background:#faf2e0}
+.menu h2{font-size:28px;font-weight:200;letter-spacing:.3em;color:#8a5a28;text-align:center;margin-bottom:8px;font-style:italic}
+.menu-sub{text-align:center;font-size:12px;letter-spacing:.2em;color:#a08060;margin-bottom:48px}
+.menu-section{max-width:900px;margin:0 auto 48px}
+.menu-section h3{font-size:14px;letter-spacing:.2em;color:#c8842a;border-bottom:1px solid #e8c88a;padding-bottom:8px;margin-bottom:24px}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px}
+.menu-card{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.menu-card-img{height:140px;background:#e8d8b8;display:flex;align-items:center;justify-content:center;color:#b09070;font-size:12px}
+.menu-card-body{padding:16px}
+.menu-card h4{font-size:14px;color:#3a2a18;margin-bottom:4px}
+.menu-card .price{font-size:13px;color:#c8842a}
+.menu-card p{font-size:11px;color:#8a7050;margin-top:6px;line-height:1.7}
+.gallery{padding:80px 24px}
+.gallery h2{font-size:28px;font-weight:200;letter-spacing:.3em;color:#8a5a28;text-align:center;margin-bottom:8px;font-style:italic}
+.gallery-sub{text-align:center;font-size:12px;letter-spacing:.2em;color:#a08060;margin-bottom:48px}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:900px;margin:0 auto}
+.gallery-item{background:#e8d8b8;aspect-ratio:1;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#b09070;font-size:12px}
+@media(max-width:600px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+.info{background:#3a2a18;color:#f0e8d8;padding:80px 24px}
+.info h2{font-size:28px;font-weight:200;letter-spacing:.3em;color:#d4a870;text-align:center;margin-bottom:8px;font-style:italic}
+.info-sub{text-align:center;font-size:12px;letter-spacing:.2em;color:#8a7050;margin-bottom:48px}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:900px;margin:0 auto}
+.info-table p{line-height:2.8;font-size:13px;color:#c8b898;border-bottom:1px solid #4a3a28;padding:0 0 8px}
+.info-table p:last-child{border-bottom:none}
+.label{color:#d4a870;margin-right:12px;font-size:12px}
+.map{background:#2a1a08;height:280px;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#4a3a28;font-size:13px}
+@media(max-width:640px){.info-grid{grid-template-columns:1fr}}
+footer{background:#2a1a08;color:#5a4030;padding:32px;text-align:center;font-size:12px;line-height:2.4}
+footer .name{color:#d4a870;font-size:18px;letter-spacing:.3em;margin-bottom:8px;font-style:italic;font-weight:200}
+.sample-badge{position:fixed;bottom:16px;right:16px;background:#e74c3c;color:#fff;font-size:11px;padding:6px 12px;border-radius:20px;font-family:sans-serif;font-weight:700;z-index:999}
+</style>
+</head>
+<body>
+<div class="sample-badge">※ サンプルサイト</div>
+<header>
+  <div class="logo">Café Soleil</div>
+  <nav>
+    <a href="#concept">コンセプト</a>
+    <a href="#menu">メニュー</a>
+    <a href="#gallery">ギャラリー</a>
+    <a href="#info">店舗情報</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Café Soleil</h1>
+  <p>陽だまりのような、やさしい時間</p>
+  <a href="#info" class="btn">店舗情報・アクセス</a>
+</section>
+
+<section class="concept" id="concept">
+  <h2>Our Story</h2>
+  <div class="divider"></div>
+  <p>
+    北山の緑に囲まれた小さなカフェ「Soleil（ソレイユ）」。<br>
+    フランス語で「太陽」を意味する名前のとおり、<br>
+    ここに来るとほっと温かくなれる場所でありたいと思っています。<br><br>
+    自家焙煎のコーヒーと、旬のフルーツを使ったスイーツ。<br>
+    テイクアウトメニューも充実させていますので、<br>
+    近くを散歩しながら気軽に立ち寄ってください。
+  </p>
+</section>
+
+<section class="menu" id="menu">
+  <h2>Menu</h2>
+  <div class="menu-sub">DRINK & FOOD</div>
+  <div class="menu-section">
+    <h3>DRINK</h3>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <div class="menu-card-img">☕ Photo</div>
+        <div class="menu-card-body">
+          <h4>自家焙煎コーヒー</h4>
+          <div class="price">¥550〜</div>
+          <p>毎朝焙煎した豆を使用。ホット・アイスどちらも可。</p>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img">🥛 Photo</div>
+        <div class="menu-card-body">
+          <h4>カフェラテ</h4>
+          <div class="price">¥660</div>
+          <p>エスプレッソと北海道産ミルクのやさしい味わい。</p>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img">🍵 Photo</div>
+        <div class="menu-card-body">
+          <h4>宇治抹茶ラテ</h4>
+          <div class="price">¥720</div>
+          <p>京都・宇治産の抹茶を使ったオリジナルドリンク。</p>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img">🍋 Photo</div>
+        <div class="menu-card-body">
+          <h4>季節のフルーツソーダ</h4>
+          <div class="price">¥680</div>
+          <p>旬のフルーツを使ったカラフルなソーダドリンク。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu-section">
+    <h3>FOOD</h3>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <div class="menu-card-img">🍰 Photo</div>
+        <div class="menu-card-body">
+          <h4>本日のケーキ</h4>
+          <div class="price">¥550〜</div>
+          <p>毎日手作りのケーキを2〜3種類ご用意しています。</p>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img">🥐 Photo</div>
+        <div class="menu-card-body">
+          <h4>モーニングセット</h4>
+          <div class="price">¥880</div>
+          <p>トースト・サラダ・ゆで卵・ドリンクのセット（〜11時）。</p>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img">🥗 Photo</div>
+        <div class="menu-card-body">
+          <h4>日替わりランチ</h4>
+          <div class="price">¥1,100</div>
+          <p>野菜たっぷりのランチプレート。ドリンク付き（11〜14時）。</p>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card-img">☕ Photo</div>
+        <div class="menu-card-body">
+          <h4>ケーキセット</h4>
+          <div class="price">¥1,050〜</div>
+          <p>ドリンクとケーキのセット。少しお得になっています。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery-sub">PHOTO GALLERY</div>
+  <div class="gallery-grid">
+    <div class="gallery-item">Photo</div>
+    <div class="gallery-item">Photo</div>
+    <div class="gallery-item">Photo</div>
+    <div class="gallery-item">Photo</div>
+    <div class="gallery-item">Photo</div>
+    <div class="gallery-item">Photo</div>
+  </div>
+</section>
+
+<section class="info" id="info">
+  <h2>Shop Info</h2>
+  <div class="info-sub">STORE INFORMATION</div>
+  <div class="info-grid">
+    <div class="info-table">
+      <p><span class="label">住所</span>京都市北区〇〇町4-5-6</p>
+      <p><span class="label">電話</span>075-XXX-XXXX</p>
+      <p><span class="label">営業時間</span>8:00〜18:00（L.O. 17:30）</p>
+      <p><span class="label">定休日</span>木曜日</p>
+      <p><span class="label">アクセス</span>地下鉄「北山」駅 徒歩5分</p>
+      <p><span class="label">駐車場</span>3台（無料）</p>
+    </div>
+    <div class="map">Googleマップ（埋め込み）</div>
+  </div>
+</section>
+
+<footer>
+  <div class="name">Café Soleil</div>
+  京都市北区〇〇町4-5-6　／　TEL：075-XXX-XXXX<br>
+  営業時間：8:00〜18:00　定休日：木曜日<br>
+  <small style="color:#3a2a10;margin-top:8px;display:block">※ これはサンプルサイトです。ten.（ホームページ制作）が制作しました。</small>
+</footer>
+</body>
+</html>

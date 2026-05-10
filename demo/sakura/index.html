@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>居酒屋 桜 | 京都・伏見の地酒と旬の肴</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Hiragino Mincho ProN','Yu Mincho',serif;color:#2c1a0e;background:#fdf8f0}
+a{text-decoration:none;color:inherit}
+/* Header */
+header{background:#2c1a0e;padding:16px 32px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+.logo{color:#d4a843;font-size:22px;letter-spacing:.2em}
+nav a{color:#f0e8d8;font-size:13px;margin-left:24px;letter-spacing:.1em}
+nav a:hover{color:#d4a843}
+/* Hero */
+.hero{background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1400') center/cover;color:#fff;text-align:center;padding:120px 24px}
+.hero h1{font-size:42px;letter-spacing:.3em;margin-bottom:12px;text-shadow:0 2px 8px rgba(0,0,0,.5)}
+.hero p{font-size:16px;letter-spacing:.15em;color:#f0e0b0;margin-bottom:36px}
+.hero .btn{background:#d4a843;color:#2c1a0e;padding:14px 40px;font-size:14px;letter-spacing:.15em;border-radius:2px;font-weight:700}
+/* Concept */
+.concept{max-width:800px;margin:0 auto;padding:72px 24px;text-align:center}
+.concept h2{font-size:26px;letter-spacing:.2em;margin-bottom:20px;color:#8b2020}
+.concept .divider{width:60px;height:2px;background:#d4a843;margin:0 auto 32px}
+.concept p{line-height:2.2;font-size:15px;color:#4a3728}
+/* Menu */
+.menu{background:#2c1a0e;padding:72px 24px;color:#f0e8d8}
+.menu h2{text-align:center;font-size:24px;letter-spacing:.2em;color:#d4a843;margin-bottom:8px}
+.menu .divider{width:60px;height:1px;background:#d4a843;margin:0 auto 48px}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px;max-width:900px;margin:0 auto}
+.menu-card{border:1px solid #5a3a1a;padding:28px;border-radius:2px}
+.menu-card h3{color:#d4a843;font-size:16px;letter-spacing:.1em;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid #5a3a1a}
+.menu-item{display:flex;justify-content:space-between;font-size:13px;padding:6px 0;border-bottom:1px dotted #4a3020;color:#e0d0b8}
+.menu-item:last-child{border-bottom:none}
+/* Access */
+.access{padding:72px 24px;max-width:900px;margin:0 auto}
+.access h2{text-align:center;font-size:24px;letter-spacing:.2em;color:#8b2020;margin-bottom:8px}
+.access .divider{width:60px;height:2px;background:#d4a843;margin:0 auto 48px}
+.access-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.access-info p{line-height:2.4;font-size:14px;color:#4a3728}
+.access-info .label{font-weight:700;color:#8b2020;margin-right:8px}
+.map{background:#e8e0d0;height:280px;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#888;font-size:13px}
+@media(max-width:640px){.access-grid{grid-template-columns:1fr}}
+/* Reserve */
+.reserve{background:#fdf0e0;padding:72px 24px;text-align:center}
+.reserve h2{font-size:24px;letter-spacing:.2em;color:#8b2020;margin-bottom:8px}
+.reserve .divider{width:60px;height:2px;background:#d4a843;margin:0 auto 32px}
+.reserve p{font-size:14px;color:#4a3728;margin-bottom:32px;line-height:2}
+form{max-width:500px;margin:0 auto}
+form input,form select,form textarea{width:100%;border:1px solid #c8b898;background:#fff;padding:12px 16px;font-size:14px;font-family:inherit;margin-bottom:16px;border-radius:2px;color:#2c1a0e}
+form textarea{height:100px;resize:vertical}
+form button{background:#8b2020;color:#fff;border:none;padding:14px 48px;font-size:14px;letter-spacing:.15em;cursor:pointer;border-radius:2px;font-family:inherit}
+/* Footer */
+footer{background:#2c1a0e;color:#a08060;padding:40px 24px;text-align:center;font-size:12px;line-height:2.4;letter-spacing:.08em}
+footer .name{color:#d4a843;font-size:18px;margin-bottom:8px}
+.sample-badge{position:fixed;bottom:16px;right:16px;background:#e74c3c;color:#fff;font-size:11px;padding:6px 12px;border-radius:20px;font-family:sans-serif;font-weight:700;z-index:999;letter-spacing:.05em}
+</style>
+</head>
+<body>
+<div class="sample-badge">※ サンプルサイト</div>
+<header>
+  <div class="logo">居酒屋 桜</div>
+  <nav>
+    <a href="#concept">こだわり</a>
+    <a href="#menu">メニュー</a>
+    <a href="#access">アクセス</a>
+    <a href="#reserve">予約</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>居酒屋 桜</h1>
+  <p>京都・伏見の地酒と、旬の肴でおもてなし</p>
+  <a href="#reserve" class="btn">ご予約はこちら</a>
+</section>
+
+<section class="concept" id="concept">
+  <h2>こだわり</h2>
+  <div class="divider"></div>
+  <p>
+    京都・伏見の地酒にこだわり、季節の食材を丁寧に仕込んだ一品をご用意しています。<br>
+    大将が毎朝市場で目利きした旬の素材を、その日のうちにお届けします。<br><br>
+    落ち着いた和の空間で、ゆったりとした時間をお過ごしください。<br>
+    一人飲みから宴会まで、幅広くご利用いただけます。
+  </p>
+</section>
+
+<section class="menu" id="menu">
+  <h2>メニュー</h2>
+  <div class="divider"></div>
+  <div class="menu-grid">
+    <div class="menu-card">
+      <h3>お通し・前菜</h3>
+      <div class="menu-item"><span>本日のお通し</span><span>380円</span></div>
+      <div class="menu-item"><span>京漬物盛り合わせ</span><span>580円</span></div>
+      <div class="menu-item"><span>だし巻き玉子</span><span>480円</span></div>
+      <div class="menu-item"><span>冷奴（京豆腐）</span><span>380円</span></div>
+    </div>
+    <div class="menu-card">
+      <h3>焼き物・揚げ物</h3>
+      <div class="menu-item"><span>鶏もも炭火焼き</span><span>680円</span></div>
+      <div class="menu-item"><span>サバの塩焼き</span><span>780円</span></div>
+      <div class="menu-item"><span>唐揚げ（5個）</span><span>580円</span></div>
+      <div class="menu-item"><span>串盛り合わせ（5本）</span><span>750円</span></div>
+    </div>
+    <div class="menu-card">
+      <h3>お酒</h3>
+      <div class="menu-item"><span>生ビール</span><span>580円</span></div>
+      <div class="menu-item"><span>伏見の地酒（一合）</span><span>680円〜</span></div>
+      <div class="menu-item"><span>焼酎（芋・麦・米）</span><span>480円</span></div>
+      <div class="menu-item"><span>ハイボール</span><span>480円</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="access" id="access">
+  <h2>アクセス</h2>
+  <div class="divider"></div>
+  <div class="access-grid">
+    <div class="access-info">
+      <p><span class="label">住所</span>京都市伏見区〇〇町1-2-3</p>
+      <p><span class="label">電話</span>075-XXX-XXXX</p>
+      <p><span class="label">営業時間</span>17:00 〜 24:00</p>
+      <p><span class="label">定休日</span>月曜日</p>
+      <p><span class="label">アクセス</span>近鉄「桃山御陵前」駅 徒歩3分</p>
+      <p><span class="label">席数</span>カウンター8席・テーブル20席</p>
+    </div>
+    <div class="map">Googleマップ（埋め込み）</div>
+  </div>
+</section>
+
+<section class="reserve" id="reserve">
+  <h2>ご予約</h2>
+  <div class="divider"></div>
+  <p>お電話またはフォームよりお気軽にご予約ください。<br>2名様以上の場合はご予約をお勧めします。</p>
+  <form>
+    <input type="text" placeholder="お名前">
+    <input type="tel" placeholder="電話番号">
+    <input type="date">
+    <select>
+      <option>人数を選択</option>
+      <option>1名</option><option>2名</option><option>3〜4名</option><option>5名以上</option>
+    </select>
+    <textarea placeholder="ご要望・アレルギー等"></textarea>
+    <button type="submit">予約する</button>
+  </form>
+</section>
+
+<footer>
+  <div class="name">居酒屋 桜</div>
+  京都市伏見区〇〇町1-2-3　／　TEL：075-XXX-XXXX<br>
+  営業時間：17:00〜24:00　定休日：月曜日<br>
+  <small style="color:#5a4030;margin-top:8px;display:block">※ これはサンプルサイトです。ten.（ホームページ制作）が制作しました。</small>
+</footer>
+</body>
+</html>

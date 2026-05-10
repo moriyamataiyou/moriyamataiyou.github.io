@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nail Salon Luce | 京都のネイルサロン</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;color:#3a2a30;background:#fdf8f8}
+a{text-decoration:none;color:inherit}
+header{background:#fff;padding:16px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #f0d8d8;position:sticky;top:0;z-index:100}
+.logo{font-size:20px;letter-spacing:.3em;color:#b05878;font-weight:300;font-style:italic}
+.logo small{display:block;font-size:10px;letter-spacing:.2em;color:#c8a0a8;font-style:normal;margin-top:2px}
+nav a{font-size:12px;color:#9a8090;margin-left:20px;letter-spacing:.08em}
+nav a:hover{color:#b05878}
+.hero{background:linear-gradient(135deg,#f9eef0 0%,#f5dde4 50%,#ead0d8 100%);padding:100px 24px;text-align:center}
+.hero h1{font-size:48px;font-weight:200;letter-spacing:.4em;color:#8a3858;margin-bottom:8px;font-style:italic}
+.hero p{font-size:13px;letter-spacing:.2em;color:#b07888;margin-bottom:36px}
+.hero .btn{background:#8a3858;color:#fff;padding:14px 44px;font-size:12px;letter-spacing:.2em;border-radius:30px}
+.concept{max-width:720px;margin:0 auto;padding:80px 24px;text-align:center}
+.concept h2{font-size:11px;letter-spacing:.3em;color:#c08898;margin-bottom:12px}
+.concept h3{font-size:26px;font-weight:300;letter-spacing:.2em;margin-bottom:32px;color:#6a3848}
+.concept p{line-height:2.4;font-size:14px;color:#6a5058}
+.gallery{padding:80px 24px;background:#fdf0f2}
+.gallery h2{font-size:11px;letter-spacing:.3em;color:#c08898;text-align:center;margin-bottom:12px}
+.gallery h3{font-size:24px;font-weight:300;letter-spacing:.2em;text-align:center;margin-bottom:48px;color:#6a3848}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:960px;margin:0 auto}
+.gallery-item{aspect-ratio:1;background:#f0d8dc;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#c0a0a8;font-size:11px}
+@media(max-width:600px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+.menu{padding:80px 24px;max-width:900px;margin:0 auto}
+.menu h2{font-size:11px;letter-spacing:.3em;color:#c08898;text-align:center;margin-bottom:12px}
+.menu h3{font-size:24px;font-weight:300;letter-spacing:.2em;text-align:center;margin-bottom:48px;color:#6a3848}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.menu-card{background:#fff;border-radius:12px;padding:28px;border:1px solid #f0d0d8;text-align:center}
+.menu-card h4{font-size:15px;color:#6a3848;margin-bottom:8px;font-weight:700}
+.menu-card .price{font-size:24px;color:#b05878;font-weight:200;margin-bottom:8px}
+.menu-card p{font-size:12px;color:#9a8090;line-height:1.9}
+.menu-card .tag{display:inline-block;background:#fce8ec;color:#b05878;font-size:10px;padding:3px 10px;border-radius:20px;margin-bottom:12px;letter-spacing:.05em}
+.flow{background:#fdf0f2;padding:80px 24px}
+.flow h2{font-size:11px;letter-spacing:.3em;color:#c08898;text-align:center;margin-bottom:12px}
+.flow h3{font-size:24px;font-weight:300;letter-spacing:.2em;text-align:center;margin-bottom:48px;color:#6a3848}
+.flow-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0;max-width:900px;margin:0 auto}
+.flow-step{text-align:center;padding:24px 16px;position:relative}
+.flow-step:not(:last-child)::after{content:'→';position:absolute;right:-8px;top:50%;transform:translateY(-50%);color:#e0b0b8;font-size:20px}
+.flow-num{width:48px;height:48px;background:#8a3858;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;margin:0 auto 12px}
+.flow-step h4{font-size:13px;color:#6a3848;margin-bottom:6px;font-weight:700}
+.flow-step p{font-size:11px;color:#9a8090;line-height:1.8}
+.access{padding:80px 24px;max-width:900px;margin:0 auto}
+.access h2{font-size:11px;letter-spacing:.3em;color:#c08898;text-align:center;margin-bottom:12px}
+.access h3{font-size:24px;font-weight:300;letter-spacing:.2em;text-align:center;margin-bottom:48px;color:#6a3848}
+.access-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.access-info p{line-height:2.8;font-size:13px;color:#6a5058}
+.label{color:#b05878;font-weight:700;margin-right:8px}
+.map{background:#f0d8dc;height:280px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#c0a0a8;font-size:12px}
+@media(max-width:640px){.access-grid{grid-template-columns:1fr}}
+.reserve{background:#8a3858;color:#fff;padding:80px 24px;text-align:center}
+.reserve h2{font-size:11px;letter-spacing:.3em;color:#f0c0cc;margin-bottom:12px}
+.reserve h3{font-size:28px;font-weight:200;letter-spacing:.2em;margin-bottom:16px}
+.reserve p{font-size:13px;color:#f0c0cc;margin-bottom:40px;line-height:2}
+form{max-width:480px;margin:0 auto;text-align:left}
+form input,form select,form textarea{width:100%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.15);padding:12px 16px;font-size:13px;font-family:inherit;margin-bottom:16px;border-radius:8px;color:#fff}
+form textarea{height:100px;resize:vertical}
+form button{width:100%;background:#fff;color:#8a3858;border:none;padding:16px;font-size:13px;letter-spacing:.15em;cursor:pointer;font-family:inherit;border-radius:30px;font-weight:700}
+footer{background:#3a1828;color:#8a6070;padding:32px;text-align:center;font-size:12px;line-height:2.4}
+footer .name{color:#e0a0b8;font-size:16px;letter-spacing:.3em;margin-bottom:8px;font-style:italic}
+.sample-badge{position:fixed;bottom:16px;right:16px;background:#e74c3c;color:#fff;font-size:11px;padding:6px 12px;border-radius:20px;font-family:sans-serif;font-weight:700;z-index:999}
+</style>
+</head>
+<body>
+<div class="sample-badge">※ サンプルサイト</div>
+<header>
+  <div class="logo">Luce<small>Nail Salon</small></div>
+  <nav>
+    <a href="#concept">コンセプト</a>
+    <a href="#gallery">ギャラリー</a>
+    <a href="#menu">メニュー</a>
+    <a href="#access">アクセス</a>
+    <a href="#reserve">予約</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Luce</h1>
+  <p>あなたの指先に、輝きを</p>
+  <a href="#reserve" class="btn">ご予約はこちら</a>
+</section>
+
+<section class="concept" id="concept">
+  <h2>CONCEPT</h2>
+  <h3>指先から、自信が生まれる</h3>
+  <p>
+    ネイルは、自分を大切にするための特別な時間。<br>
+    一人ひとりの肌色・好みに合わせたデザインをご提案し、<br>
+    爪の健康を守りながら美しいネイルをお届けします。<br><br>
+    完全予約制のプライベートサロンで、<br>
+    ゆったりと心地よい時間をお過ごしください。
+  </p>
+</section>
+
+<section class="gallery" id="gallery">
+  <h2>GALLERY</h2>
+  <h3>施術実績・デザイン</h3>
+  <div class="gallery-grid">
+    <div class="gallery-item">💅 Photo</div>
+    <div class="gallery-item">💅 Photo</div>
+    <div class="gallery-item">💅 Photo</div>
+    <div class="gallery-item">💅 Photo</div>
+    <div class="gallery-item">💅 Photo</div>
+    <div class="gallery-item">💅 Photo</div>
+    <div class="gallery-item">💅 Photo</div>
+    <div class="gallery-item">💅 Photo</div>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <h2>MENU</h2>
+  <h3>料金メニュー</h3>
+  <div class="menu-grid">
+    <div class="menu-card">
+      <div class="tag">人気No.1</div>
+      <h4>ジェルネイル（ワンカラー）</h4>
+      <div class="price">¥6,600〜</div>
+      <p>単色のシンプルなジェルネイル。発色が美しく長持ちします。</p>
+    </div>
+    <div class="menu-card">
+      <div class="tag">おすすめ</div>
+      <h4>ジェルネイル（アート）</h4>
+      <div class="price">¥9,900〜</div>
+      <p>フラワー・マーブル・ラメ等、豊富なデザインからお選びください。</p>
+    </div>
+    <div class="menu-card">
+      <div class="tag">初めての方</div>
+      <h4>初回トライアル</h4>
+      <div class="price">¥5,500</div>
+      <p>初めてのお客様限定プラン。お気軽にお試しください。</p>
+    </div>
+    <div class="menu-card">
+      <h4>オフ（付け替え）</h4>
+      <div class="price">¥2,200</div>
+      <p>当サロン施術のジェルネイルのオフ。新しいデザインにお付け替えします。</p>
+    </div>
+    <div class="menu-card">
+      <h4>ハンドケア</h4>
+      <div class="price">¥3,300</div>
+      <p>甘皮処理・保湿・爪の形を整えるケアコースです。</p>
+    </div>
+    <div class="menu-card">
+      <h4>フット（ジェル）</h4>
+      <div class="price">¥8,800〜</div>
+      <p>足元のケアも丁寧に。ペディキュアとジェルどちらも対応。</p>
+    </div>
+  </div>
+</section>
+
+<section class="flow">
+  <h2>FLOW</h2>
+  <h3>ご予約からご来店の流れ</h3>
+  <div class="flow-steps">
+    <div class="flow-step">
+      <div class="flow-num">1</div>
+      <h4>ご予約</h4>
+      <p>LINEまたはフォームから希望日時をご連絡ください</p>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">2</div>
+      <h4>デザイン相談</h4>
+      <p>来店前に希望のデザイン画像をお送りいただくとスムーズです</p>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">3</div>
+      <h4>ご来店・施術</h4>
+      <p>カウンセリング後、丁寧に施術いたします</p>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">4</div>
+      <h4>アフターケア</h4>
+      <p>施術後のケア方法もご説明します</p>
+    </div>
+  </div>
+</section>
+
+<section class="access" id="access">
+  <h2>ACCESS</h2>
+  <h3>アクセス</h3>
+  <div class="access-grid">
+    <div class="access-info">
+      <p><span class="label">住所</span>京都市下京区〇〇町5-6-7</p>
+      <p><span class="label">電話</span>075-XXX-XXXX</p>
+      <p><span class="label">営業時間</span>10:00〜19:00</p>
+      <p><span class="label">定休日</span>月曜日・火曜日</p>
+      <p><span class="label">アクセス</span>地下鉄「五条」駅 徒歩3分</p>
+      <p><span class="label">予約</span>完全予約制</p>
+    </div>
+    <div class="map">Googleマップ（埋め込み）</div>
+  </div>
+</section>
+
+<section class="reserve" id="reserve">
+  <h2>RESERVATION</h2>
+  <h3>ご予約</h3>
+  <p>完全予約制です。フォームまたはお電話からご予約ください。<br>初めての方もお気軽にどうぞ。</p>
+  <form>
+    <input type="text" placeholder="お名前">
+    <input type="tel" placeholder="電話番号">
+    <input type="date">
+    <select style="color:#fff">
+      <option>メニューを選択</option>
+      <option>ジェルネイル（ワンカラー）</option>
+      <option>ジェルネイル（アート）</option>
+      <option>初回トライアル</option>
+      <option>ハンドケア</option>
+      <option>フット</option>
+    </select>
+    <textarea placeholder="ご希望のデザインやご質問をお書きください"></textarea>
+    <button type="submit">予約する</button>
+  </form>
+</section>
+
+<footer>
+  <div class="name">Luce.</div>
+  京都市下京区〇〇町5-6-7　／　TEL：075-XXX-XXXX<br>
+  営業時間：10:00〜19:00　定休日：月・火曜日　完全予約制<br>
+  <small style="color:#3a1820;margin-top:8px;display:block">※ これはサンプルサイトです。ten.（ホームページ制作）が制作しました。</small>
+</footer>
+</body>
+</html>

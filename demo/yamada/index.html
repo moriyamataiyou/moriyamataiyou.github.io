@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>山田会計事務所 | 京都の税理士事務所</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;color:#1a2a3a;background:#f5f7fa}
+a{text-decoration:none;color:inherit}
+header{background:#1a2a4a;padding:16px 48px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+.logo{color:#fff}
+.logo h1{font-size:18px;letter-spacing:.1em;font-weight:700}
+.logo small{font-size:10px;color:#8aa0c0;letter-spacing:.15em;display:block;margin-top:2px}
+nav a{color:#a0b8d0;font-size:12px;margin-left:24px;letter-spacing:.08em}
+nav a:hover{color:#fff}
+.hero{background:linear-gradient(135deg,#1a2a4a 0%,#2a3a5a 100%);color:#fff;padding:100px 48px}
+.hero-inner{max-width:900px;margin:0 auto}
+.hero h2{font-size:13px;letter-spacing:.3em;color:#7a9abf;margin-bottom:16px}
+.hero h1{font-size:36px;font-weight:300;letter-spacing:.15em;line-height:1.6;margin-bottom:24px}
+.hero p{font-size:14px;color:#a0b8d0;line-height:2;margin-bottom:40px;max-width:560px}
+.hero .btn{background:#c9a84c;color:#1a2a4a;padding:14px 44px;font-size:13px;letter-spacing:.15em;border-radius:2px;font-weight:700}
+.service{padding:80px 48px;background:#fff}
+.service h2{font-size:12px;letter-spacing:.3em;color:#4a7aaa;text-align:center;margin-bottom:12px}
+.service h3{font-size:26px;font-weight:300;letter-spacing:.15em;text-align:center;margin-bottom:8px;color:#1a2a3a}
+.divider{width:48px;height:2px;background:#c9a84c;margin:0 auto 48px}
+.service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;max-width:1000px;margin:0 auto}
+.service-card{border:1px solid #e0e8f0;border-radius:4px;padding:32px 24px;border-top:3px solid #1a2a4a}
+.service-card .icon{font-size:32px;margin-bottom:16px}
+.service-card h4{font-size:15px;font-weight:700;color:#1a2a4a;margin-bottom:12px}
+.service-card p{font-size:12px;color:#5a6a7a;line-height:2}
+.about{background:#f0f4f8;padding:80px 48px}
+.about h2{font-size:12px;letter-spacing:.3em;color:#4a7aaa;text-align:center;margin-bottom:12px}
+.about h3{font-size:26px;font-weight:300;letter-spacing:.15em;text-align:center;margin-bottom:8px;color:#1a2a3a}
+.about .divider{width:48px;height:2px;background:#c9a84c;margin:0 auto 48px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:900px;margin:0 auto;align-items:center}
+.about-img{background:#d8e4f0;height:320px;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#8aa0c0;font-size:13px}
+.about-text h4{font-size:20px;font-weight:300;letter-spacing:.15em;margin-bottom:8px;color:#1a2a3a}
+.about-text .title{font-size:12px;color:#4a7aaa;margin-bottom:20px;letter-spacing:.1em}
+.about-text p{font-size:13px;color:#4a5a6a;line-height:2.2;margin-bottom:16px}
+.about-text .qualification{font-size:11px;color:#7a8a9a;line-height:2}
+@media(max-width:640px){.about-grid{grid-template-columns:1fr}}
+.price{padding:80px 48px;background:#fff}
+.price h2{font-size:12px;letter-spacing:.3em;color:#4a7aaa;text-align:center;margin-bottom:12px}
+.price h3{font-size:26px;font-weight:300;letter-spacing:.15em;text-align:center;margin-bottom:8px;color:#1a2a3a}
+.price .divider{width:48px;height:2px;background:#c9a84c;margin:0 auto 48px}
+.price-note{text-align:center;font-size:12px;color:#7a8a9a;margin-bottom:40px}
+.price-table{max-width:800px;margin:0 auto;border:1px solid #e0e8f0;border-radius:4px;overflow:hidden}
+.price-row{display:grid;grid-template-columns:1fr auto;align-items:center;padding:20px 32px;border-bottom:1px solid #e8f0f8}
+.price-row:last-child{border-bottom:none}
+.price-row:nth-child(even){background:#f8fafc}
+.price-row h4{font-size:14px;color:#1a2a3a;font-weight:700}
+.price-row p{font-size:11px;color:#7a8a9a;margin-top:4px}
+.price-row .amt{font-size:18px;color:#1a2a4a;font-weight:700;text-align:right;white-space:nowrap;padding-left:24px}
+.access{background:#f0f4f8;padding:80px 48px}
+.access h2{font-size:12px;letter-spacing:.3em;color:#4a7aaa;text-align:center;margin-bottom:12px}
+.access h3{font-size:26px;font-weight:300;letter-spacing:.15em;text-align:center;margin-bottom:8px;color:#1a2a3a}
+.access .divider{width:48px;height:2px;background:#c9a84c;margin:0 auto 48px}
+.access-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:900px;margin:0 auto}
+.access-info p{line-height:2.8;font-size:13px;color:#4a5a6a;border-bottom:1px solid #d8e4f0;padding-bottom:8px}
+.access-info p:last-child{border-bottom:none}
+.label{color:#1a2a4a;font-weight:700;margin-right:12px}
+.map{background:#d8e4f0;height:280px;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#8aa0c0;font-size:13px}
+@media(max-width:640px){.access-grid{grid-template-columns:1fr}}
+.contact{background:#1a2a4a;color:#fff;padding:80px 48px;text-align:center}
+.contact h2{font-size:12px;letter-spacing:.3em;color:#7a9abf;margin-bottom:12px}
+.contact h3{font-size:26px;font-weight:300;letter-spacing:.15em;margin-bottom:16px}
+.contact p{font-size:13px;color:#a0b8d0;margin-bottom:48px;line-height:2}
+form{max-width:520px;margin:0 auto;text-align:left}
+form label{font-size:11px;letter-spacing:.1em;color:#8aa0c0;display:block;margin-bottom:6px}
+form input,form select,form textarea{width:100%;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);padding:12px 16px;font-size:13px;font-family:inherit;margin-bottom:20px;border-radius:2px;color:#fff}
+form textarea{height:120px;resize:vertical}
+form button{width:100%;background:#c9a84c;color:#1a2a4a;border:none;padding:16px;font-size:13px;letter-spacing:.15em;cursor:pointer;font-family:inherit;border-radius:2px;font-weight:700}
+footer{background:#0f1a2a;color:#3a4a5a;padding:32px;text-align:center;font-size:12px;line-height:2.4}
+footer .name{color:#a0b8d0;font-size:15px;letter-spacing:.15em;margin-bottom:8px}
+.sample-badge{position:fixed;bottom:16px;right:16px;background:#e74c3c;color:#fff;font-size:11px;padding:6px 12px;border-radius:20px;font-family:sans-serif;font-weight:700;z-index:999}
+</style>
+</head>
+<body>
+<div class="sample-badge">※ サンプルサイト</div>
+<header>
+  <div class="logo">
+    <h1>山田会計事務所</h1>
+    <small>Yamada Accounting Office</small>
+  </div>
+  <nav>
+    <a href="#service">サービス</a>
+    <a href="#about">代表紹介</a>
+    <a href="#price">料金</a>
+    <a href="#access">アクセス</a>
+    <a href="#contact">お問い合わせ</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <h2>YAMADA ACCOUNTING OFFICE</h2>
+    <h1>数字の先にある、<br>あなたの未来を守る</h1>
+    <p>
+      創業支援から経営改善まで、中小企業・個人事業主の皆様に寄り添う税理士事務所です。<br>
+      難しい専門用語を使わず、わかりやすく丁寧に対応します。
+    </p>
+    <a href="#contact" class="btn">無料相談を申し込む</a>
+  </div>
+</section>
+
+<section class="service" id="service">
+  <h2>SERVICE</h2>
+  <h3>サービス内容</h3>
+  <div class="divider"></div>
+  <div class="service-grid">
+    <div class="service-card">
+      <div class="icon">📊</div>
+      <h4>記帳代行・決算申告</h4>
+      <p>日々の記帳から決算書・確定申告書の作成まで、一括してお任せいただけます。</p>
+    </div>
+    <div class="service-card">
+      <div class="icon">🏢</div>
+      <h4>創業・開業支援</h4>
+      <p>法人設立、個人事業開業に必要な届出の手続きから、最初の決算までサポートします。</p>
+    </div>
+    <div class="service-card">
+      <div class="icon">💡</div>
+      <h4>節税・経営相談</h4>
+      <p>合法的な節税対策と、キャッシュフロー改善のための経営アドバイスを行います。</p>
+    </div>
+    <div class="service-card">
+      <div class="icon">🏦</div>
+      <h4>融資・資金調達支援</h4>
+      <p>日本政策金融公庫・信用金庫等への融資申請書類の作成・面談同行を行います。</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2>ABOUT</h2>
+  <h3>代表紹介</h3>
+  <div class="divider"></div>
+  <div class="about-grid">
+    <div class="about-img">Photo</div>
+    <div class="about-text">
+      <h4>山田 太郎</h4>
+      <div class="title">代表税理士</div>
+      <p>
+        大手税理士法人で15年のキャリアを積んだのち、中小企業・個人事業主の身近な相談相手になりたいという想いで独立開業。
+      </p>
+      <p>
+        「難しいことをわかりやすく」をモットーに、専門用語を使わない丁寧な説明を心がけています。
+        お客様の事業が成長することを、数字の面から全力でサポートします。
+      </p>
+      <div class="qualification">
+        税理士登録番号：XXXXX<br>
+        所属：近畿税理士会
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="price" id="price">
+  <h2>PRICE</h2>
+  <h3>料金プラン</h3>
+  <div class="divider"></div>
+  <div class="price-note">すべて税込価格です。詳細はお気軽にお問い合わせください。</div>
+  <div class="price-table">
+    <div class="price-row">
+      <div><h4>記帳代行（月次）</h4><p>領収書・請求書の整理・入力代行</p></div>
+      <div class="amt">¥11,000〜/月</div>
+    </div>
+    <div class="price-row">
+      <div><h4>顧問契約（法人）</h4><p>月次訪問・決算・申告書作成込み</p></div>
+      <div class="amt">¥33,000〜/月</div>
+    </div>
+    <div class="price-row">
+      <div><h4>顧問契約（個人事業）</h4><p>確定申告・記帳指導込み</p></div>
+      <div class="amt">¥11,000〜/月</div>
+    </div>
+    <div class="price-row">
+      <div><h4>確定申告（スポット）</h4><p>給与所得以外の申告書作成</p></div>
+      <div class="amt">¥55,000〜</div>
+    </div>
+    <div class="price-row">
+      <div><h4>会社設立支援</h4><p>設立手続き・税務届出一式</p></div>
+      <div class="amt">¥110,000〜</div>
+    </div>
+  </div>
+</section>
+
+<section class="access" id="access">
+  <h2>ACCESS</h2>
+  <h3>アクセス</h3>
+  <div class="divider"></div>
+  <div class="access-grid">
+    <div class="access-info">
+      <p><span class="label">事務所名</span>山田会計事務所</p>
+      <p><span class="label">住所</span>京都市中京区〇〇町6-7-8</p>
+      <p><span class="label">電話</span>075-XXX-XXXX</p>
+      <p><span class="label">営業時間</span>9:00〜18:00（土日祝：要予約）</p>
+      <p><span class="label">定休日</span>日曜日・祝日</p>
+      <p><span class="label">アクセス</span>地下鉄「四条」駅 徒歩4分</p>
+    </div>
+    <div class="map">Googleマップ（埋め込み）</div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>CONTACT</h2>
+  <h3>無料相談・お問い合わせ</h3>
+  <p>初回相談は無料です。税務・経理についてお気軽にご相談ください。<br>メールは24時間受付、翌営業日にご返答いたします。</p>
+  <form>
+    <label>お名前・会社名</label>
+    <input type="text" placeholder="山田 太郎 / 株式会社〇〇">
+    <label>メールアドレス</label>
+    <input type="email" placeholder="info@example.com">
+    <label>電話番号</label>
+    <input type="tel" placeholder="090-XXXX-XXXX">
+    <label>相談内容</label>
+    <select style="color:#fff">
+      <option>相談内容を選択</option>
+      <option>記帳代行・顧問契約について</option>
+      <option>確定申告について</option>
+      <option>創業・開業支援について</option>
+      <option>節税相談</option>
+      <option>その他</option>
+    </select>
+    <label>メッセージ</label>
+    <textarea placeholder="ご相談内容をご自由にお書きください"></textarea>
+    <button type="submit">無料相談を申し込む</button>
+  </form>
+</section>
+
+<footer>
+  <div class="name">山田会計事務所</div>
+  京都市中京区〇〇町6-7-8　／　TEL：075-XXX-XXXX<br>
+  営業時間：9:00〜18:00　定休日：日曜日・祝日<br>
+  <small style="color:#1a2a3a;margin-top:8px;display:block">※ これはサンプルサイトです。ten.（ホームページ制作）が制作しました。</small>
+</footer>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>整体院 やすらぎ | 京都の整体・骨格矯正</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;color:#2a3a30;background:#f5f8f5}
+a{text-decoration:none;color:inherit}
+header{background:#fff;padding:16px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #d8e4d8;position:sticky;top:0;z-index:100;box-shadow:0 1px 8px rgba(0,0,0,.06)}
+.logo{font-size:20px;letter-spacing:.2em;color:#2a4a38;font-weight:700}
+.logo span{color:#5a9a6a;font-size:12px;display:block;letter-spacing:.15em;font-weight:400;margin-top:2px}
+nav a{font-size:12px;color:#5a7060;margin-left:24px;letter-spacing:.08em}
+nav a:hover{color:#3a7a50}
+.hero{background:linear-gradient(135deg,#2a4a38 0%,#3a6a50 100%);color:#fff;padding:100px 24px;text-align:center}
+.hero h1{font-size:40px;letter-spacing:.3em;font-weight:300;margin-bottom:12px}
+.hero p{font-size:14px;letter-spacing:.15em;color:#a8d4b8;margin-bottom:40px}
+.hero .btn{background:#fff;color:#2a4a38;padding:14px 44px;font-size:12px;letter-spacing:.2em;border-radius:30px;font-weight:700}
+.concept{max-width:800px;margin:0 auto;padding:80px 24px;text-align:center}
+.concept h2{font-size:12px;letter-spacing:.3em;color:#5a9a6a;margin-bottom:12px}
+.concept h3{font-size:26px;font-weight:300;letter-spacing:.15em;margin-bottom:32px;color:#2a4a38}
+.concept p{line-height:2.4;font-size:14px;color:#4a6050}
+.merit{background:#eaf3ec;padding:72px 24px}
+.merit h2{font-size:12px;letter-spacing:.3em;color:#5a9a6a;text-align:center;margin-bottom:12px}
+.merit h3{font-size:24px;font-weight:300;letter-spacing:.15em;text-align:center;margin-bottom:48px;color:#2a4a38}
+.merit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;max-width:900px;margin:0 auto}
+.merit-card{background:#fff;padding:32px 24px;border-radius:8px;text-align:center;border-top:3px solid #5a9a6a}
+.merit-card .icon{font-size:36px;margin-bottom:16px}
+.merit-card h4{font-size:15px;font-weight:700;margin-bottom:12px;color:#2a4a38}
+.merit-card p{font-size:12px;color:#5a7060;line-height:1.9}
+.menu{padding:80px 24px;max-width:900px;margin:0 auto}
+.menu h2{font-size:12px;letter-spacing:.3em;color:#5a9a6a;text-align:center;margin-bottom:12px}
+.menu h3{font-size:24px;font-weight:300;letter-spacing:.15em;text-align:center;margin-bottom:48px;color:#2a4a38}
+.menu-list{display:flex;flex-direction:column;gap:16px}
+.menu-item{display:flex;justify-content:space-between;align-items:center;background:#fff;padding:24px 32px;border-radius:8px;border-left:4px solid #5a9a6a;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.menu-item-info h4{font-size:15px;font-weight:700;color:#2a4a38;margin-bottom:4px}
+.menu-item-info p{font-size:12px;color:#5a7060}
+.menu-item-price{text-align:right}
+.menu-item-price .price{font-size:22px;color:#3a7a50;font-weight:300}
+.menu-item-price .time{font-size:11px;color:#8a9a88;margin-top:2px}
+.profile{background:#2a4a38;color:#f0f8f2;padding:80px 24px}
+.profile h2{font-size:12px;letter-spacing:.3em;color:#7ac48a;text-align:center;margin-bottom:12px}
+.profile h3{font-size:24px;font-weight:300;letter-spacing:.15em;text-align:center;margin-bottom:48px}
+.profile-card{display:flex;gap:48px;align-items:center;max-width:800px;margin:0 auto}
+.profile-img{width:180px;height:180px;border-radius:50%;background:#1a3028;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#4a6050;font-size:12px}
+.profile-card h4{font-size:20px;font-weight:300;letter-spacing:.15em;margin-bottom:8px}
+.profile-card .title{font-size:12px;color:#7ac48a;margin-bottom:20px;letter-spacing:.1em}
+.profile-card p{font-size:13px;color:#b8d4c0;line-height:2.2}
+@media(max-width:600px){.profile-card{flex-direction:column;text-align:center}}
+.access{padding:80px 24px;max-width:900px;margin:0 auto}
+.access h2{font-size:12px;letter-spacing:.3em;color:#5a9a6a;text-align:center;margin-bottom:12px}
+.access h3{font-size:24px;font-weight:300;letter-spacing:.15em;text-align:center;margin-bottom:48px;color:#2a4a38}
+.access-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.access-info p{line-height:2.8;font-size:13px;color:#4a6050}
+.access-info .label{color:#3a7a50;font-weight:700;margin-right:8px}
+.map{background:#d8e8d8;height:280px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#6a8070;font-size:13px}
+@media(max-width:640px){.access-grid{grid-template-columns:1fr}}
+.reserve{background:#eaf3ec;padding:80px 24px;text-align:center}
+.reserve h2{font-size:12px;letter-spacing:.3em;color:#5a9a6a;margin-bottom:12px}
+.reserve h3{font-size:24px;font-weight:300;letter-spacing:.15em;margin-bottom:16px;color:#2a4a38}
+.reserve p{font-size:13px;color:#5a7060;margin-bottom:40px;line-height:2}
+form{max-width:480px;margin:0 auto;text-align:left}
+form label{font-size:11px;letter-spacing:.1em;color:#5a7060;display:block;margin-bottom:6px}
+form input,form select,form textarea{width:100%;border:1px solid #c0d8c0;background:#fff;padding:12px 16px;font-size:13px;font-family:inherit;margin-bottom:20px;border-radius:4px}
+form textarea{height:100px;resize:vertical}
+form button{width:100%;background:#2a4a38;color:#fff;border:none;padding:16px;font-size:13px;letter-spacing:.15em;cursor:pointer;font-family:inherit;border-radius:4px}
+footer{background:#1a3028;color:#4a6050;padding:32px;text-align:center;font-size:12px;line-height:2.4}
+footer .name{color:#7ac48a;font-size:16px;letter-spacing:.2em;margin-bottom:8px}
+.sample-badge{position:fixed;bottom:16px;right:16px;background:#e74c3c;color:#fff;font-size:11px;padding:6px 12px;border-radius:20px;font-family:sans-serif;font-weight:700;z-index:999}
+</style>
+</head>
+<body>
+<div class="sample-badge">※ サンプルサイト</div>
+<header>
+  <div class="logo">整体院 やすらぎ<span>Yasuragi Seitai</span></div>
+  <nav>
+    <a href="#concept">当院について</a>
+    <a href="#menu">施術メニュー</a>
+    <a href="#profile">院長紹介</a>
+    <a href="#access">アクセス</a>
+    <a href="#reserve">予約</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>整体院 やすらぎ</h1>
+  <p>身体の根本から、ていねいに整える</p>
+  <a href="#reserve" class="btn">無料相談・ご予約</a>
+</section>
+
+<section class="concept" id="concept">
+  <h2>ABOUT</h2>
+  <h3>あなたの「つらさ」に、向き合います</h3>
+  <p>
+    肩こり・腰痛・頭痛・自律神経の乱れ……<br>
+    「病院では異常なし」と言われたけれど、つらい症状が続く方のために。<br><br>
+    当院では骨格・筋肉・神経の状態を丁寧に検査し、<br>
+    身体の根本的な原因から改善を目指す施術を行っています。<br>
+    「安心して任せられる」と感じていただける院づくりを心がけています。
+  </p>
+</section>
+
+<section class="merit" id="concept2">
+  <h2>FEATURE</h2>
+  <h3>やすらぎが選ばれる理由</h3>
+  <div class="merit-grid">
+    <div class="merit-card">
+      <div class="icon">🔍</div>
+      <h4>丁寧な検査・説明</h4>
+      <p>施術前に身体の状態を検査し、原因と改善策をわかりやすくご説明します。</p>
+    </div>
+    <div class="merit-card">
+      <div class="icon">🤲</div>
+      <h4>国家資格保有者による施術</h4>
+      <p>柔道整復師・鍼灸師の国家資格を持つ院長が全施術を担当します。</p>
+    </div>
+    <div class="merit-card">
+      <div class="icon">📋</div>
+      <h4>再発しない身体づくり</h4>
+      <p>施術だけでなく、日常生活でのセルフケア方法もアドバイスします。</p>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <h2>MENU</h2>
+  <h3>施術メニュー・料金</h3>
+  <div class="menu-list">
+    <div class="menu-item">
+      <div class="menu-item-info">
+        <h4>初回検査＋整体</h4>
+        <p>身体の状態を丁寧に検査し、全身のバランスを整えます</p>
+      </div>
+      <div class="menu-item-price">
+        <div class="price">¥5,500</div>
+        <div class="time">約60分</div>
+      </div>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-info">
+        <h4>全身整体</h4>
+        <p>骨格・筋肉・神経にアプローチし、身体全体を整えます</p>
+      </div>
+      <div class="menu-item-price">
+        <div class="price">¥6,600</div>
+        <div class="time">約50分</div>
+      </div>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-info">
+        <h4>肩こり・腰痛集中コース</h4>
+        <p>お悩みの部位を重点的にケアするコースです</p>
+      </div>
+      <div class="menu-item-price">
+        <div class="price">¥4,400</div>
+        <div class="time">約40分</div>
+      </div>
+    </div>
+    <div class="menu-item">
+      <div class="menu-item-info">
+        <h4>骨盤矯正</h4>
+        <p>産後の骨盤ケアや姿勢改善に効果的なコースです</p>
+      </div>
+      <div class="menu-item-price">
+        <div class="price">¥7,700</div>
+        <div class="time">約60分</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="profile" id="profile">
+  <h2>PROFILE</h2>
+  <h3>院長紹介</h3>
+  <div class="profile-card">
+    <div class="profile-img">Photo</div>
+    <div>
+      <h4>田中 一郎</h4>
+      <div class="title">院長 / 柔道整復師・鍼灸師</div>
+      <p>
+        柔道整復師・鍼灸師の国家資格を取得後、大阪の整骨院で10年の経験を積む。<br>
+        「根本から治す整体」をコンセプトに、地元京都で「やすらぎ」を開業。<br><br>
+        「病院で異常なし」「マッサージに通っても改善しない」という方が、<br>
+        本当の意味で楽になれる院を目指しています。お気軽にご相談ください。
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="access" id="access">
+  <h2>ACCESS</h2>
+  <h3>アクセス</h3>
+  <div class="access-grid">
+    <div class="access-info">
+      <p><span class="label">住所</span>京都市右京区〇〇町3-4-5</p>
+      <p><span class="label">電話</span>075-XXX-XXXX</p>
+      <p><span class="label">営業時間</span>9:00〜19:00（最終受付18:00）</p>
+      <p><span class="label">定休日</span>水曜日・日曜日</p>
+      <p><span class="label">アクセス</span>阪急「西院」駅 徒歩6分</p>
+      <p><span class="label">駐車場</span>2台（無料）</p>
+    </div>
+    <div class="map">Googleマップ（埋め込み）</div>
+  </div>
+</section>
+
+<section class="reserve" id="reserve">
+  <h2>RESERVATION</h2>
+  <h3>ご予約・無料相談</h3>
+  <p>初回は無料カウンセリングを実施しています。<br>身体のお悩みをお気軽にご相談ください。</p>
+  <form>
+    <label>お名前</label>
+    <input type="text" placeholder="田中 一郎">
+    <label>電話番号</label>
+    <input type="tel" placeholder="090-XXXX-XXXX">
+    <label>ご希望日</label>
+    <input type="date">
+    <label>施術メニュー</label>
+    <select>
+      <option>メニューを選択（未定でもOK）</option>
+      <option>初回検査＋整体</option>
+      <option>全身整体</option>
+      <option>肩こり・腰痛集中コース</option>
+      <option>骨盤矯正</option>
+    </select>
+    <label>お悩み・ご質問</label>
+    <textarea placeholder="症状やご希望をお気軽にお書きください"></textarea>
+    <button type="submit">予約・相談を申し込む</button>
+  </form>
+</section>
+
+<footer>
+  <div class="name">整体院 やすらぎ</div>
+  京都市右京区〇〇町3-4-5　／　TEL：075-XXX-XXXX<br>
+  営業時間：9:00〜19:00　定休日：水曜日・日曜日<br>
+  <small style="color:#2a3a28;margin-top:8px;display:block">※ これはサンプルサイトです。ten.（ホームページ制作）が制作しました。</small>
+</footer>
+</body>
+</html>

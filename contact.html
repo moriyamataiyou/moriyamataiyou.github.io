@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>お問い合わせ | ten</title>
+  <meta name="description" content="tenへのお問い合わせ。ホームページ制作のご相談・お見積もりは無料。3営業日以内にご返信します。" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">ten<span class="nav__logo-dot">.</span></a>
+    <div class="nav__links">
+      <a href="index.html">ホーム</a>
+      <a href="services.html">サービス・料金</a>
+      <a href="works.html">制作実績</a>
+      <a href="faq.html">よくある質問</a>
+      <a href="contact.html" class="nav__cta active">無料で相談する</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header__label">Contact</div>
+  <h1>お問い合わせ</h1>
+  <p>相談・見積もり無料 / 3営業日以内にご返信します</p>
+</div>
+
+<section class="contact">
+  <div class="wrap--narrow">
+
+    <div class="contact__trust">
+      <div class="trust-pill">
+        <div class="trust-pill__icon">💬</div>
+        <p>相談無料</p>
+      </div>
+      <div class="trust-pill">
+        <div class="trust-pill__icon">⏰</div>
+        <p>3営業日以内返信</p>
+      </div>
+      <div class="trust-pill">
+        <div class="trust-pill__icon">🔒</div>
+        <p>個人情報保護</p>
+      </div>
+    </div>
+
+    <form class="contact__form" action="https://formspree.io/f/xlgzndaa" method="POST">
+      <div style="display:flex;flex-direction:column;gap:1.5rem">
+
+        <div class="form-row form-row--2">
+          <div class="form-group">
+            <label>お名前 <span class="req">*</span></label>
+            <input type="text" name="name" placeholder="山田 太郎" required />
+          </div>
+          <div class="form-group">
+            <label>会社名・店舗名</label>
+            <input type="text" name="company" placeholder="〇〇 カフェ" />
+          </div>
+        </div>
+
+        <div class="form-row form-row--2">
+          <div class="form-group">
+            <label>メールアドレス <span class="req">*</span></label>
+            <input type="email" name="email" placeholder="example@email.com" required />
+          </div>
+          <div class="form-group">
+            <label>電話番号</label>
+            <input type="tel" name="phone" placeholder="090-0000-0000" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>業種</label>
+          <select name="industry">
+            <option value="">選択してください</option>
+            <option value="food">飲食店・カフェ・居酒屋</option>
+            <option value="beauty">美容院・エステ・ネイルサロン</option>
+            <option value="health">整体院・接骨院・クリニック</option>
+            <option value="retail">小売店・専門店</option>
+            <option value="professional">士業・コンサルタント</option>
+            <option value="other">その他</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>ご希望のプラン</label>
+          <div class="form__plan">
+            <input class="plan-radio" type="radio" name="plan" value="light" id="p1" />
+            <label class="plan-label" for="p1">ライトプラン</label>
+            <input class="plan-radio" type="radio" name="plan" value="standard" id="p2" />
+            <label class="plan-label" for="p2">スタンダード</label>
+            <input class="plan-radio" type="radio" name="plan" value="unknown" id="p3" />
+            <label class="plan-label" for="p3">未定・相談</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>お問い合わせ内容 <span class="req">*</span></label>
+          <textarea name="message" placeholder="例：居酒屋のホームページを作りたいです。メニューとアクセスのページが欲しいです。予算は5万円程度を考えています。" required></textarea>
+        </div>
+
+        <button type="submit" class="form__submit">送信する →</button>
+        <p class="form__note">ご入力いただいた情報は、お問い合わせへの返信以外には使用しません。</p>
+
+      </div>
+    </form>
+
+    <div class="contact__alt">
+      <p>フォームが苦手な方はメールでもお気軽に</p>
+      <a href="mailto:taiyou.moriyama89@gmail.com">taiyou.moriyama89@gmail.com</a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__top">
+      <div>
+        <div class="footer__logo">ten.</div>
+        <div class="footer__catch">想いを、サイトに。</div>
+      </div>
+      <nav class="footer__nav">
+        <a href="services.html">サービス・料金</a>
+        <a href="works.html">制作実績</a>
+        <a href="faq.html">よくある質問</a>
+        <a href="contact.html">お問い合わせ</a>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2026 ten. All rights reserved.</p>
+      <div style="display:flex;gap:1.5rem;align-items:center">
+        <a href="privacy.html" style="font-size:.68rem;color:var(--text-3);letter-spacing:.04em">プライバシーポリシー</a>
+        <a href="tokusho.html" style="font-size:.68rem;color:var(--text-3);letter-spacing:.04em">特定商取引法</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: .1 });
+document.querySelectorAll('.fi').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
